@@ -3,6 +3,9 @@ import { Mail, Github, Linkedin, Instagram, Briefcase, Facebook } from 'lucide-r
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
+const CONTACT_ENDPOINT =
+  import.meta.env.PROD ? '/.netlify/functions/contact' : '/api/contact';
+
 export function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -17,7 +20,7 @@ export function Contact() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
