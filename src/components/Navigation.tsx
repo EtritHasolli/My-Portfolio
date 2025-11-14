@@ -1,6 +1,6 @@
 import { Menu, X, Download } from 'lucide-react';
 import { useState } from 'react';
-import ResumePDF from '../files/EtritHasolliResume.pdf';
+import ResumePDF from '../files/EtritHasolli_Resume.pdf';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ export function Navigation() {
     {
       name: 'Resume',
       href: ResumePDF,
-      download: 'EtritHasolliResume.pdf',
+      download: 'EtritHasolli_Resume.pdf',
       isDownload: true,
     },
   ];

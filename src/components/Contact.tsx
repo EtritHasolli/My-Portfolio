@@ -146,7 +146,7 @@ export function Contact() {
               <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/etrit-hasolli-6156332b6/"
+              href="https://www.linkedin.com/in/etrit-hasolli/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-100 rounded-full hover:bg-[#7CCF8A] hover:text-white transition-all duration-300 transform hover:scale-110"
