@@ -1,5 +1,6 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { useState } from 'react';
+import ResumePDF from '../files/EtritHasolliResume.pdf';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,12 @@ export function Navigation() {
     { name: 'Skills', href: '#skills' },
     { name: 'Voluntary Work', href: '#voluntary' },
     { name: 'Contact', href: '#contact' },
+    {
+      name: 'Resume',
+      href: ResumePDF,
+      download: 'EtritHasolliResume.pdf',
+      isDownload: true,
+    },
   ];
 
   return (
@@ -26,9 +33,22 @@ export function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
+                download={item.download}
                 className="text-gray-700 hover:text-[#7CCF8A] transition-all duration-300 font-medium relative group"
               >
-                {item.name}
+                {item.isDownload ? (
+                  <div className="flex items-center">
+                    <Download
+                      size={20}
+                      className="text-[#2f6f4f] group-hover:text-[#7CCF8A] transition-colors duration-300"
+                    />
+                    <span className="ml-2 text-sm opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                      Download Resume
+                    </span>
+                  </div>
+                ) : (
+                  item.name
+                )}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7CCF8A] group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
@@ -53,7 +73,7 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 rounded-md text-gray-700 hover:text-[#7CCF8A] hover:bg-[#7CCF8A]/10 font-medium transition-all duration-300"
               >
-                {item.name}
+                {item.isDownload ? 'Download Resume' : item.name}
               </a>
             ))}
           </div>
