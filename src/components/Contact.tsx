@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Instagram } from 'lucide-react';
 
 export function Contact() {
   return (
@@ -14,14 +14,14 @@ export function Contact() {
             a question or just want to say hi, feel free to reach out!
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:etrithasolli5@gmail.com"
             className="inline-block px-8 py-3 bg-[#7CCF8A] text-white rounded-lg hover:bg-[#2f6f4f] transition-all duration-300 font-medium mb-12 transform hover:scale-105 active:scale-95"
           >
             Send Me an Email
           </a>
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/EtritHasolli"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-100 rounded-full hover:bg-[#2f6f4f] hover:text-white transition-all duration-300 transform hover:scale-110"
@@ -29,7 +29,7 @@ export function Contact() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/etrit-hasolli-6156332b6/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-100 rounded-full hover:bg-[#7CCF8A] hover:text-white transition-all duration-300 transform hover:scale-110"
@@ -37,18 +37,18 @@ export function Contact() {
               <Linkedin size={24} />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://www.instagram.com/etritt.h/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gray-100 rounded-full hover:bg-[#7CCF8A] hover:text-white transition-all duration-300 transform hover:scale-110"
             >
-              <Twitter size={24} />
+              <Instagram size={24} />
             </a>
           </div>
         </div>
       </div>
       <footer className="mt-20 pt-8 border-t border-[#7CCF8A]/20 text-center text-gray-500">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Etrit Hasolli. All rights reserved.</p>
       </footer>
     </section>
   );

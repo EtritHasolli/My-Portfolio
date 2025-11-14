@@ -1,26 +1,26 @@
 import { Heart } from 'lucide-react';
 
 const voluntaryWork = [
+  // {
+  //   organization: 'Code for Good',
+  //   role: 'Volunteer Developer',
+  //   period: '2023 - Present',
+  //   description:
+  //     'Building web applications for non-profit organizations to help them achieve their missions and reach more people.',
+  // },
   {
-    organization: 'Code for Good',
-    role: 'Volunteer Developer',
+    organization: 'Fondacioni Freskia',
+    role: 'Volunteer',
     period: '2023 - Present',
     description:
-      'Building web applications for non-profit organizations to help them achieve their missions and reach more people.',
+      'A volunteer at Fondacioni Freskia helps support orphans and people in need. The work includes organizing donations, delivering food and clothing, helping with educational activities, and offering support to individuals and families facing difficult situations. The goal is to provide care, stability, and hope to those who need it most.',
   },
   {
-    organization: 'Tech Education Initiative',
-    role: 'Mentor',
-    period: '2022 - Present',
+    organization: 'Instituti Hasan Tahsin',
+    role: 'Volunteer',
+    period: '2023 - Present',
     description:
-      'Mentoring aspiring developers from underrepresented communities, helping them learn programming and start their tech careers.',
-  },
-  {
-    organization: 'Open Source Contributor',
-    role: 'Active Contributor',
-    period: '2021 - Present',
-    description:
-      'Contributing to various open-source projects, fixing bugs, adding features, and helping maintain community libraries.',
+      'As a volunteer at Instituti Hasan Tahsin, I am part of the PR team, helping shape the institution’s public image and communication. I take part in important decision-making processes and contribute ideas that guide ongoing projects. I also manage and maintain the institution’s website, ensuring that its information is accurate, up to date, and well-presented.',
   },
 ];
 

@@ -18,7 +18,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="text-2xl font-bold text-[#2f6f4f] hover:text-[#7CCF8A] transition-colors duration-300">
-            Portfolio
+            Etrit Hasolli
           </a>
 
           <div className="hidden md:flex space-x-8">

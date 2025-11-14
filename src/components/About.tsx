@@ -9,20 +9,23 @@ export function About() {
           <h2 className="text-4xl font-bold text-gray-900">About Me</h2>
         </div>
         <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-gray-600 leading-relaxed mb-6 hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
-            I'm a dedicated developer with a passion for building meaningful projects that make a
-            difference. With expertise in modern web technologies, I create solutions that are both
-            functional and beautiful.
+          <p className="text-xl text-gray-600 leading-relaxed mb-6 hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
+            I am a full-stack developer with a strong foundation in modern web technologies and a
+            commitment to building reliable, efficient, and user-focused digital experiences. My work
+            is guided by a deep respect for clean architecture, maintainability, and thoughtful design.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6 hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
-            My journey in tech has been driven by curiosity and a desire to solve real-world
-            problems. I believe in writing clean, maintainable code and continuously learning new
-            technologies to stay at the forefront of the industry.
+          <p className="text-xl text-gray-600 leading-relaxed mb-6 hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
+            Through academic study and professional projects, I have gained experience across the
+            full development cycle—from frontend interfaces to backend systems and database design.
+            I strive to create solutions that solve real problems, adapt to user needs, and stand the
+            test of time. Curiosity keeps me learning, while discipline keeps my craft sharp.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
-            When I'm not coding, you'll find me contributing to open-source projects, volunteering
-            in my community, or exploring new technologies that can help make the world a better
-            place.
+          <p className="text-xl text-gray-600 leading-relaxed hover:text-gray-800 transition-colors duration-300 animate-fadeInUp">
+            Outside of development, I dedicate my time to community service. I volunteer with
+            organizations that support orphans, families in need, and educational initiatives. I also
+            contribute to public relations efforts and manage institutional websites—ensuring clear,
+            accessible communication that reflects each organization’s mission. These roles remind me
+            that technology serves its highest purpose when it uplifts others.
           </p>
         </div>
       </div>
