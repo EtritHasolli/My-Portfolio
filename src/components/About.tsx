@@ -1,5 +1,5 @@
 import { User } from 'lucide-react';
-import ProfileImage from '../images/pfp.png';
+import ProfileImage from '../images/selfimage.jpg';
 
 export function About() {
   return (
