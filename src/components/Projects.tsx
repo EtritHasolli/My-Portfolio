@@ -12,7 +12,7 @@ const projects = [
       'A professionally built platform that enables businesses to register and manage their appointments seamlessly, while providing clients with an easy and accessible way to book appointments directly through the website.',
     image: AppointlyImage,
     tags: ['React', 'Node.js', 'Tailwind CSS', 'JavaScript', 'Groq', 'Supabase'],
-    website: 'https://appointly-ks.netlify.app/',
+    website: 'https://appointly-ks.com/',
     github: 'https://github.com/lerthy/Appointlify-Amazon',
   },
   {
