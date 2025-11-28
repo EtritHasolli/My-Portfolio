@@ -13,7 +13,7 @@ const projects = [
     image: AppointlyImage,
     tags: ['React', 'Node.js', 'Tailwind CSS', 'JavaScript', 'Groq', 'Supabase'],
     website: 'https://appointly-ks.com/',
-    github: 'https://github.com/lerthy/Appointlify-Amazon',
+    github: '',
   },
   {
     title: 'Digital Sea',
@@ -65,46 +65,53 @@ export function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-200 hover:border-[#7CCF8A] hover:-translate-y-2 animate-scaleIn"
+              className="bg-white rounded-xl p-6 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-200 hover:border-[#7CCF8A] hover:-translate-y-2 animate-scaleIn h-full flex flex-col"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
               <div className="relative overflow-hidden rounded-lg mb-4 shadow-lg group">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" 
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-3 py-1 bg-[#7CCF8A]/20 text-[#2f6f4f] rounded-xl text-sm font-medium hover:bg-[#7CCF8A] hover:text-white transition-all duration-300 cursor-default"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <a
-                  href={project.website}
-                  target="_blank"
-                  className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
-                >
-                  <ExternalLink size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  Website
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-700 hover:text-[#7CCF8A] font-medium transition-all duration-300 group"
-                >
-                  <Github size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  Code
-                </a>
+              <div className="flex flex-col flex-1">
+                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                <div className="flex flex-col mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 bg-[#7CCF8A]/20 text-[#2f6f4f] rounded-xl text-sm font-medium hover:bg-[#7CCF8A] hover:text-white transition-all duration-300 cursor-default"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
+                    >
+                      <ExternalLink size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      Website
+                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-700 hover:text-[#7CCF8A] font-medium transition-all duration-300 group"
+                      >
+                        <Github size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
+                        Code
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
