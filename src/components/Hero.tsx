@@ -7,9 +7,9 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#7CCF8A]/5 to-[#2f6f4f]/5 pt-16 overflow-hidden"
     >
       {/* Decorative blurred orbs */}
-      <div className="absolute -top-48 -right-48 w-[800px] h-[800px] rounded-full bg-[#7CCF8A]/20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-60 -left-60 w-[900px] h-[900px] rounded-full bg-[#2f6f4f]/10 blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full bg-[#7CCF8A]/5 blur-3xl pointer-events-none" />
+      <div className="absolute -top-48 -right-48 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] lg:w-[800px] lg:h-[800px] rounded-full bg-[#7CCF8A]/15 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-60 -left-60 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] lg:w-[900px] lg:h-[900px] rounded-full bg-[#2f6f4f]/8 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[600px] sm:h-[600px] lg:w-[1000px] lg:h-[1000px] rounded-full bg-[#7CCF8A]/5 blur-3xl pointer-events-none" />
 
       {/* Decorative rings */}
       <div className="absolute top-16 left-10 w-24 h-24 rounded-full border border-[#7CCF8A]/20 pointer-events-none" />
