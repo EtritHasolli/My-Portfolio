@@ -11,6 +11,7 @@ export function Navigation() {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Voluntary Work', href: '#voluntary' },
     { name: 'Contact', href: '#contact' },
     {

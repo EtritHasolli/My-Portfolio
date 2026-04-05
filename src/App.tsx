@@ -3,6 +3,7 @@ import { About } from './components/About';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
+import { Certifications } from './components/Certifications';
 import { Voluntary } from './components/Voluntary';
 import { Contact } from './components/Contact';
 import { Navigation } from './components/Navigation';
@@ -16,6 +17,7 @@ function App() {
       <Experience />
       <Projects />
       <Skills />
+      <Certifications />
       <Voluntary />
       <Contact />
     </div>

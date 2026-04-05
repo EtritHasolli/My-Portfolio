@@ -1,5 +1,5 @@
 import { Folder, ExternalLink, Github } from 'lucide-react';
-import AppointlyImage from '../images/appointly.jpg';
+import AppointlyImage from '../images/appointly.png';
 import DigitalSeaImage from '../images/digisea.jpg';
 import FondacioniFreskiaImage from '../images/fondacioni-freskia.jpg';
 import ChallengeTrackerImage from '../images/challengetracker.jpg';
@@ -48,7 +48,7 @@ const projects = [
       'A website that allows users to brainstorm ideas and share them with others.',
     image: BrainstormImage,
     tags: ['React', 'Node.js', 'Tailwind CSS', 'JavaScript', 'Supabase'],
-    website: 'https://brainstormideas.vercel.app/',
+    // website: 'https://brainstormideas.vercel.app/',
     github: 'https://github.com/EtritHasolli/Brainstorm',
   },
 ];
@@ -90,8 +90,9 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-4">
+                    {project.website && (
                     <a
-                      href={project.website}
+                      href={project.website ?? ''}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
@@ -99,6 +100,7 @@ export function Projects() {
                       <ExternalLink size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
                       Website
                     </a>
+                    )}
                     {project.github && (
                       <a
                         href={project.github}
