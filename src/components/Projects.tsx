@@ -1,11 +1,23 @@
-import { Folder, ExternalLink, Github } from 'lucide-react';
+import { Folder, ExternalLink, Github, Download } from 'lucide-react';
 import AppointlyImage from '../images/appointly.png';
 import DigitalSeaImage from '../images/digisea.jpg';
 import FondacioniFreskiaImage from '../images/fondacioni-freskia.jpg';
 import ChallengeTrackerImage from '../images/challengetracker.jpg';
 import BrainstormImage from '../images/brainstorm.png';
+import DesktopCatalogImage from '../images/desktopcatalog.png';
 
 const projects = [
+  {
+    title: 'DesktopCatalog',
+    description:
+      'Turn any website into a desktop app with its own shortcut and icon. Windows x64 installer — download and run DesktopCatalog.Setup.1.0.0.exe',
+    image: DesktopCatalogImage,
+    tags: ['React', 'Node.js', 'Tailwind CSS', 'JavaScript', 'Groq', 'Supabase'],
+    website: '',
+    download:
+      'https://github.com/EtritHasolli/DesktopCatalog/releases/download/v1.0.0/DesktopCatalog.Setup.1.0.0.exe',
+    github: '',
+  },
   {
     title: 'Appointly',
     description:
@@ -100,6 +112,20 @@ export function Projects() {
                       <ExternalLink size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
                       Website
                     </a>
+                    )}
+                    {project.download && (
+                      <a
+                        href={project.download}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
+                      >
+                        <Download
+                          size={18}
+                          className="mr-1 group-hover:translate-x-1 transition-transform duration-300"
+                        />
+                        Download
+                      </a>
                     )}
                     {project.github && (
                       <a
