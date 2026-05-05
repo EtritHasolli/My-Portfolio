@@ -10,9 +10,9 @@ const projects = [
   {
     title: 'DesktopCatalog',
     description:
-      'Turn any website into a desktop app with its own shortcut and icon. Windows x64 installer — download and run DesktopCatalog.Setup.1.0.0.exe',
+      'Turn any website into a desktop app with its own shortcut and icon. Windows x64 installer — download and run the DesktopCatalog app.',
     image: DesktopCatalogImage,
-    tags: ['React', 'Node.js', 'Tailwind CSS', 'JavaScript', 'Groq', 'Supabase'],
+    tags: ['React', 'Electron', 'Vite', 'TypeScript', 'Tailwind CSS', 'SQLite'],
     website: '',
     download:
       'https://github.com/EtritHasolli/DesktopCatalog/releases/download/v1.0.0/DesktopCatalog.Setup.1.0.0.exe',
@@ -33,7 +33,7 @@ const projects = [
       'An e-commerce platform with advanced filtering, cart management, and payment integration.',
     image: DigitalSeaImage,
     tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-    website: 'https://digitalsea.ct.ws/',
+    // website: 'https://digitalsea.ct.ws/',
     github: 'https://github.com/jasinua/DigitalSea',
   },
   {
@@ -42,7 +42,7 @@ const projects = [
       'A website for a non-profit organization that provides free education to children in need.',
     image: FondacioniFreskiaImage,
     tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-    website: 'https://fondacionifreskia.ct.ws/',
+    // website: 'https://fondacionifreskia.ct.ws/',
     github: 'https://github.com/jasinua/fondacionifreskiaa',
   },
   {

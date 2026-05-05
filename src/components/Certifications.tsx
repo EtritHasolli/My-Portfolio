@@ -1,8 +1,16 @@
 import { BadgeCheck, Calendar } from 'lucide-react';
 import CertPlaceholder1 from '../images/2ndplace.png';
 import CertPlaceholder2 from '../images/besttech.png';
+import CertPlaceholder3 from '../images/KCDE_Certifikata.png';
 
 const certifications = [
+  {
+    title: 'Best technical Implementation Award in UEP',
+    description:
+      'I won the Best Technical Implementation award in the University Engagment Program with my project "Appointly".',
+    date: 'February 2025',
+    image: CertPlaceholder2,
+  },
   {
     title: '2nd Place in the University Engagment Program',
     description:
@@ -11,11 +19,11 @@ const certifications = [
     image: CertPlaceholder1,
   },
   {
-    title: 'Best technical Implementation Award in UEP',
+    title: 'KCDE Certificate',
     description:
-      'I won the best technical implementation award in the University Engagment Program with my project "Appointly".',
-    date: 'February 2025',
-    image: CertPlaceholder2,
+      'KCDE Certification is a certification that I earned by participating in the KCDE training program for Software Testing within the framework of the "Youth-focused Digital Academy" project.',
+    date: '1 December 2025 - 22 January 2026',
+    image: CertPlaceholder3,
   },
 ];
 

@@ -11,7 +11,7 @@ const skillCategories = [
   },
   {
     category: 'Tools & Others',
-    skills: ['Git', 'Docker', 'AWS', 'CI/CD', 'Agile', 'Groq', 'OpenAI', 'API'],
+    skills: ['Git', 'Docker', 'AWS', 'CI/CD', 'Agile', 'Groq', 'OpenAI', 'API', 'Electron', 'SQLite'],
   },
   {
     category: 'Soft Skills',
