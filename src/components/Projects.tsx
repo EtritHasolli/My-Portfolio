@@ -5,8 +5,50 @@ import FondacioniFreskiaImage from '../images/fondacioni-freskia.jpg';
 import ChallengeTrackerImage from '../images/challengetracker.jpg';
 import BrainstormImage from '../images/brainstorm.png';
 import DesktopCatalogImage from '../images/desktopcatalog.png';
+import AuraSanctuaryImage from '../images/aura_logo.png';
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  /** Use contain for logos so they are not cropped in the fixed-height frame */
+  imageFit?: 'cover' | 'contain';
+  tags: string[];
+  website?: string;
+  /** Single download link (legacy) */
+  download?: string;
+  /** Multiple platform downloads */
+  downloads?: { label: string; href: string }[];
+  github?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: 'Aura Sanctuary',
+    description:
+      "Aura Sanctuary is a productivity RPG: you manage real-life tasks, habits, and focus (quests, pomodoro, streaks) and that progress feeds a cozy sanctuary experience—character paths, gear, shop, forge, companions, and light social play with friends and tavern parties (shared boss, chat). It's framed as a calm, pixel-art desktop sanctuary where getting things done levels up your in-game world.",
+    image: AuraSanctuaryImage,
+    imageFit: 'contain',
+    tags: ['Electron', 'React', 'TypeScript', 'Tailwind CSS'],
+    downloads: [
+      {
+        label: 'Windows',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-Setup-1.0.10.exe',
+      },
+      {
+        label: 'macOS (Intel)',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10.dmg',
+      },
+      {
+        label: 'macOS (Apple Silicon)',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10-arm64.dmg',
+      },
+      {
+        label: 'Linux',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10.AppImage',
+      },
+    ],
+  },
   {
     title: 'DesktopCatalog',
     description:
@@ -84,7 +126,11 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className={`w-full h-80 transition-transform duration-500 group-hover:scale-110 ${
+                    project.imageFit === 'contain'
+                      ? 'object-contain bg-gray-50'
+                      : 'object-cover'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
@@ -101,7 +147,7 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 items-center">
                     {project.website && (
                     <a
                       href={project.website ?? ''}
@@ -113,20 +159,26 @@ export function Projects() {
                       Website
                     </a>
                     )}
-                    {project.download && (
+                    {(project.downloads?.length
+                      ? project.downloads
+                      : project.download
+                        ? [{ label: 'Download', href: project.download }]
+                        : []
+                    ).map((item, linkIndex) => (
                       <a
-                        href={project.download}
+                        key={linkIndex}
+                        href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
                       >
                         <Download
                           size={18}
-                          className="mr-1 group-hover:translate-x-1 transition-transform duration-300"
+                          className="mr-1 group-hover:translate-x-1 transition-transform duration-300 shrink-0"
                         />
-                        Download
+                        {item.label}
                       </a>
-                    )}
+                    ))}
                     {project.github && (
                       <a
                         href={project.github}
