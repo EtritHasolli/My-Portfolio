@@ -30,22 +30,23 @@ const projects: Project[] = [
     image: AuraSanctuaryImage,
     imageFit: 'contain',
     tags: ['Electron', 'React', 'TypeScript', 'Tailwind CSS'],
+    website: 'https://aurasanctuary.netlify.app/',
     downloads: [
       {
         label: 'Windows',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-Setup-1.0.10.exe',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-Setup-1.0.13.exe',
       },
       {
         label: 'macOS (Intel)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10.dmg',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13.dmg',
       },
       {
         label: 'macOS (Apple Silicon)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10-arm64.dmg',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13-arm64.dmg',
       },
       {
         label: 'Linux',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.10.AppImage',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13.AppImage',
       },
     ],
   },
@@ -153,9 +154,9 @@ export function Projects() {
                       href={project.website ?? ''}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
+                      className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-colors duration-300"
                     >
-                      <ExternalLink size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ExternalLink size={18} className="mr-1" />
                       Website
                     </a>
                     )}
@@ -170,11 +171,11 @@ export function Projects() {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-all duration-300 group"
+                        className="flex items-center text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-colors duration-300"
                       >
                         <Download
                           size={18}
-                          className="mr-1 group-hover:translate-x-1 transition-transform duration-300 shrink-0"
+                          className="mr-1 shrink-0"
                         />
                         {item.label}
                       </a>
@@ -184,9 +185,9 @@ export function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-gray-700 hover:text-[#7CCF8A] font-medium transition-all duration-300 group"
+                        className="flex items-center text-gray-700 hover:text-[#7CCF8A] font-medium transition-colors duration-300"
                       >
-                        <Github size={18} className="mr-1 group-hover:translate-x-1 transition-transform duration-300" />
+                        <Github size={18} className="mr-1" />
                         Code
                       </a>
                     )}
