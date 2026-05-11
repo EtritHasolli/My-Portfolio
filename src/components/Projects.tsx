@@ -6,6 +6,7 @@ import ChallengeTrackerImage from '../images/challengetracker.jpg';
 import BrainstormImage from '../images/brainstorm.png';
 import DesktopCatalogImage from '../images/desktopcatalog.png';
 import AuraSanctuaryImage from '../images/aura_logo.png';
+import { auraSanctuaryDownloads } from '../generated/aura-sanctuary-downloads';
 
 type Project = {
   title: string;
@@ -31,24 +32,7 @@ const projects: Project[] = [
     imageFit: 'contain',
     tags: ['Electron', 'React', 'TypeScript', 'Tailwind CSS'],
     website: 'https://aurasanctuary.netlify.app/',
-    downloads: [
-      {
-        label: 'Windows',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-Setup-1.0.13.exe',
-      },
-      {
-        label: 'macOS (Intel)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13.dmg',
-      },
-      {
-        label: 'macOS (Apple Silicon)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13-arm64.dmg',
-      },
-      {
-        label: 'Linux',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13.AppImage',
-      },
-    ],
+    downloads: auraSanctuaryDownloads,
   },
   {
     title: 'DesktopCatalog',

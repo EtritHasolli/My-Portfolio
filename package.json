@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "update:aura-release": "node scripts/fetch-aura-release.mjs",
+    "prebuild": "node scripts/fetch-aura-release.mjs",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
