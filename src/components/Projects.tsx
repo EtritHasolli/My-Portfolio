@@ -34,19 +34,19 @@ const projects: Project[] = [
     downloads: [
       {
         label: 'Windows',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-Setup-1.0.13.exe',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-Setup-1.0.13.exe',
       },
       {
         label: 'macOS (Intel)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13.dmg',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13.dmg',
       },
       {
         label: 'macOS (Apple Silicon)',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13-arm64.dmg',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13-arm64.dmg',
       },
       {
         label: 'Linux',
-        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.10/Aura-Sanctuary-1.0.13.AppImage',
+        href: 'https://github.com/EtritHasolli/aura-sanctuary/releases/download/v1.0.13/Aura-Sanctuary-1.0.13.AppImage',
       },
     ],
   },
