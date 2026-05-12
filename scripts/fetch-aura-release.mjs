@@ -17,7 +17,7 @@ const REPO = 'EtritHasolli/aura-sanctuary';
 const API = `https://api.github.com/repos/${REPO}/releases/latest`;
 
 /** Used only when the API fails and no output file exists yet. */
-const FALLBACK_VERSION = '1.0.13';
+const FALLBACK_VERSION = '1.0.19';
 
 function fallbackDownloads(version) {
   const base = `https://github.com/${REPO}/releases/download/v${version}`;
