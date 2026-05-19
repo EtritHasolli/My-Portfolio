@@ -1,9 +1,18 @@
-import { BadgeCheck, Calendar } from 'lucide-react';
+import { BadgeCheck, Calendar, ExternalLink } from 'lucide-react';
 import CertPlaceholder1 from '../images/2ndplace.png';
 import CertPlaceholder2 from '../images/besttech.png';
 import CertPlaceholder3 from '../images/KCDE_Certifikata.png';
+import CourseraMarketingCert from '../images/coursera-marketing-cert.svg';
 
-const certifications = [
+type Certification = {
+  title: string;
+  description: string;
+  date: string;
+  image: string;
+  link?: string;
+};
+
+const certifications: Certification[] = [
   {
     title: 'Best technical Implementation Award in UEP',
     description:
@@ -24,6 +33,14 @@ const certifications = [
       'KCDE Certification is a certification that I earned by participating in the KCDE training program for Software Testing within the framework of the "Youth-focused Digital Academy" project.',
     date: '1 December 2025 - 22 January 2026',
     image: CertPlaceholder3,
+  },
+  {
+    title: 'Fundamentals of Marketing Strategy',
+    description:
+      'Completed the Fundamentals of Marketing Strategy course authorized by the University of London and offered through Coursera.',
+    date: 'May 2026',
+    image: CourseraMarketingCert,
+    link: 'https://coursera.org/verify/6MB7UAJ7KNTH',
   },
 ];
 
@@ -51,9 +68,22 @@ export function Certifications() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">{cert.title}</h3>
               <p className="text-gray-600 mb-4 leading-relaxed flex-1">{cert.description}</p>
-              <div className="flex items-center gap-2 text-[#2f6f4f] font-medium mt-auto pt-3 border-t border-gray-100">
-                <Calendar size={18} className="text-[#7CCF8A] shrink-0" aria-hidden />
-                <span>{cert.date}</span>
+              <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                <div className="flex items-center gap-2 text-[#2f6f4f] font-medium">
+                  <Calendar size={18} className="text-[#7CCF8A] shrink-0" aria-hidden />
+                  <span>{cert.date}</span>
+                </div>
+                {cert.link && (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-[#7CCF8A] hover:text-[#2f6f4f] font-medium transition-colors duration-300 text-sm"
+                  >
+                    <ExternalLink size={15} />
+                    Verify
+                  </a>
+                )}
               </div>
             </div>
           ))}
