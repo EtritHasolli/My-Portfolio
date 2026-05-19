@@ -2,7 +2,7 @@ import { BadgeCheck, Calendar, ExternalLink } from 'lucide-react';
 import CertPlaceholder1 from '../images/2ndplace.png';
 import CertPlaceholder2 from '../images/besttech.png';
 import CertPlaceholder3 from '../images/KCDE_Certifikata.png';
-import CourseraMarketingCert from '../images/coursera-marketing-cert.svg';
+import CourseraMarketingCert from '../images/coursera-marketing-cert.jpg';
 
 type Certification = {
   title: string;
