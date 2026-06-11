@@ -31,6 +31,7 @@ const voluntaryWork = [
 type VoluntaryProject = {
   title: string;
   image: string;
+  description: string;
   link?: string;
 };
 
@@ -44,22 +45,26 @@ const voluntaryProjects: VoluntaryProject[] = [
   {
     title: 'Lectures and gifts for children',
     image: work1,
-    link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=88',
+    description: 'Organized and delivered educational lectures along with gift distributions to bring joy and learning opportunities to underprivileged children.',
+    // link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=88',
   },
   {
     title: 'Food packages for people in need',
     image: work2,
-    link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=89',
+    description: 'Helped prepare and distribute food packages to families and individuals facing hardship, ensuring essential nutrition reached those who need it most.',
+    // link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=89',
   },
   {
     title: 'Lectures and distribution of gifts for children',
     image: work3,
-    link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=98',
+    description: 'Participated in outreach events combining educational lectures with gift-giving activities to support and inspire children in need.',
+    // link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=98',
   },
   {
     title: 'Eid al-Adha table',
     image: work4,
-    link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=102',
+    description: 'Contributed to organizing a shared Eid al-Adha meal, bringing together the community to celebrate and provide food to those who could not afford it.',
+    // link: 'https://fondacionifreskia.ct.ws/view-projects.php?id=102',
   },
 ];
 
@@ -108,9 +113,10 @@ export function Voluntary() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <div className="p-5">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1 whitespace-nowrap overflow-hidden text-ellipsis">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2 whitespace-nowrap overflow-hidden text-ellipsis">
                       {project.title}
                     </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-3">{project.description}</p>
                     {project.link && (
                       <a
                         href={project.link}
